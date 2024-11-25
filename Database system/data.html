@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wholesale Supermarket Pricing System</title>
+    <link rel="stylesheet" href="data.css">
+    <script src="data.js"></script>
+</head>
+<body>            
+           <div class="container">
+        <h1>Wholesale Pricing System</h1>
+    
+        <form id="pricing-form">
+          <table id="pricing-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Size</th>
+                <th>Unit Price ($)</th>
+                <th>Quantity</th>
+                <th>Total Price ($)</th>
+              </tr>
+            </thead>
+            <tbody>
+            
+              <tr>
+                <td>Rice</td>
+                <td>50kg</td>
+                <td data-unit-price="250">250</td>
+                <td><input type="number" class="quantity" data-price="250" min="0" value="0"></td>
+                <td class="row-total">0</td>
+              </tr>
+              <tr>
+                <td>Rice</td>
+                <td>25kg</td>
+                <td data-unit-price="130">130</td>
+                <td><input type="number" class="quantity" data-price="130" min="0" value="0"></td>
+                <td class="row-total">0</td>
+              </tr>
+              <tr>
+                <td>Oil</td>
+                <td>10L</td>
+                <td data-unit-price="70">70</td>
+                <td><input type="number" class="quantity" data-price="70" min="0" value="0"></td>
+                <td class="row-total">0</td>
+              </tr>
+              <tr>
+                <td>Tomatoes (Cartons)</td>
+                <td>Medium</td>
+                <td data-unit-price="50">50</td>
+                <td><input type="number" class="quantity" data-price="50" min="0" value="0"></td>
+                <td class="row-total">0</td>
+              </tr>
+              
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4" class="text-right"><strong>Grand Total ($):</strong></td>
+                <td id="grand-total">0</td>
+              </tr>
+            </tfoot>
+          </table>
+          <button type="button" onclick="calculateAll()">Calculate Total</button>
+        </form>
+      </div>
+</body>
+</html>
